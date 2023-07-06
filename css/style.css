@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: new zelek;
+    src: url('../assets/font/FontsFree-Net-NewZelek.ttf.ttf');
+}
+body{
+    background-color: white;
+}
+header{
+    position: fixed;
+    z-index: 99;
+    background-color: rgb(207, 203, 203);
+}
+.header-grid {
+    margin: 1.5rem 3rem 1.5rem 3rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "logo-contenedor nav carrito";
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-grid .logo-contenedor {
+    display: flex;
+    grid-area: logo-contenedor;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.header-grid .logo-contenedor a img {
+    width: 6rem;
+    height: auto;
+}
+
+.header-grid .carrito i {
+    font-size: 3rem;
+    text-align: right;
+    width: 100%;
+}
+
+.header-grid .logo-contenedor a h1 {
+    font-size: 2.7rem;
+}
+
+.header-grid .nav {
+    display: flex;
+    grid-area: nav;
+}
+
+.header-grid .nav .barra-nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.header-grid .nav .barra-nav li {
+    list-style: none;
+    font-family: "new zelek", sans-serif;
+    font-size: 1.7rem;
+    width: 100%;
+}
+
+main{
+    background-color: rgb(235, 230, 230);
+}
+
+.main-grid {
+    padding: 0rem 0rem 2rem 0rem;
+    display: grid;
+    grid-template-rows: repeat(1, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "seccion-1" "seccion-1" "seccion-2" "seccion-2";
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0rem 0rem 1rem 3rem; 
+    text-align: center;
+}
+
+.main-grid .seccion-1 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-grid .seccion-2 {
+    width: 100%;
+}
+
+.main-grid .seccion-1 .card{
+    margin-top: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+.main-grid .seccion-2 .card{
+    margin-top: 10rem;
+}
+
+footer{
+    background-color: white;
+    margin-top: 1rem;
+}
+
+footer .footer-section{
+    padding: 1rem 0rem 1rem 1rem;
+}

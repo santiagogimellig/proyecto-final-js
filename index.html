@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="slingshot, wakeboard, wakeboard lancha, wakeboard park, lancha, park">
+    <meta name="description" content="Slingshot es una pagina web donde podes encontrar tablas de todo tipo, junto con el equipamiento necesario para complementarlas, e informarte sobre el wakeboard">
+    <meta name="author" content="santiago gimelli">
+    <meta name="copyright" contento="Slingshot">
+    <title>Slingshot</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="header-grid">
+            <div class="logo-contenedor">
+                <a href="./index.html"><img src="https://seeklogo.com/images/S/slingshot-kite-surfing-logo-6D45055CF0-seeklogo.com.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul class="barra-nav">
+                    <li>Inicio</li>
+                    <li>Lancha</li>
+                    <li>Park</li>
+                    <li>Tablas</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+            <div class="carrito">
+                <i class='bx bx-cart-download'></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="mainGrid" class="main-grid">
+        </div>
+    </main>
+
+    <footer>
+        <section id="misprods" class="row">
+            <!-- Aqui los productos -->
+        </section>
+        <section class="footer-section">
+            <h4>Tu carrito:</h4>
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID:</th>
+                    <th>Nombre:</th>
+                    <th>Tipo:</th>
+                    <th>Cantidad:</th>
+                    <th>Precio:</th>
+                    <th>Eliminar:</th>
+                </tr>
+            </thead>
+            <tbody id="tablabody">
+                <!-- aqui tabla carrito -->
+            </tbody>
+            </table>
+            <br>
+            <h4 id="total">Total a pagar $:</h4>
+            <a id="finalizar" href="#" class="btn btn-primary">Finalizar Compra</a>
+            <a id="vaciar" href="#" class="btn btn-warning">Vaciar Carrito</a>
+        </section>
+        </main>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="./productos.js"></script> -->
+    <script src="./logica.js"></script>
+</body>
+</html>
