@@ -9,7 +9,7 @@ let botonFinalizarCompra = document.getElementById("finalizar");
 let botonVaciarCarrito = document.getElementById("vaciar");
 
 // renderizo los productos
-function renderizarProductos(producto){
+function renderizarProductos(productos){
     // cargo las cartas de los prodcutos
     productos.forEach((producto)=>{
         let cardContent = document.createElement("div");
