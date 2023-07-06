@@ -173,23 +173,31 @@ function eliminarDelCarrito(producto) {
 }
 
 // boton finalizar compra
-botonFinalizarCompra.onclick=()=>{
-    carrito=[];
-    document.getElementById('tablabody').innerHTML='';
-    document.getElementById('total').innerText = 'Total a pagar $:';
-    Swal.fire('Gracias por tu compra','Pronto la recibirás','success');
-    // storage NEW
-    localStorage.removeItem("carrito");
+botonFinalizarCompra.onclick = () => {
+    if (carrito.length === 0) { // verifica que cuando se toca el boton finalizar compra no tiene nada en el carrito, entonces devulve un sweet alert
+        Swal.fire('El carrito está vacío', 'Agrega productos antes de finalizar la compra', 'warning');
+    } else {
+        carrito = [];
+        document.getElementById('tablabody').innerHTML = '';
+        document.getElementById('total').innerText = 'Total a pagar $:';
+        Swal.fire('Gracias por tu compra', 'Pronto la recibirás', 'success');
+        // storage NEW
+        localStorage.removeItem("carrito");
+    }
 }
 
 // vaciar carrito
-botonVaciarCarrito.onclick=()=>{
-    carrito=[];
-    document.getElementById('tablabody').innerHTML='';
-    document.getElementById('total').innerText = 'Total a pagar $:';
-    Swal.fire('El carrito quedo vacio','Puedes volver a comprar!','success')
-    //storage NEW
-    localStorage.removeItem("carrito");
+botonVaciarCarrito.onclick = () => {
+    if (carrito.length === 0) { // verifica que cuando se toca el boton vaciar carrito no tiene nada en el carrito, entonces devulve un sweet alert
+        Swal.fire('El carrito ya está vacío', 'No hay productos para vaciar', 'warning');
+    } else {
+        carrito = [];
+        document.getElementById('tablabody').innerHTML = '';
+        document.getElementById('total').innerText = 'Total a pagar $:';
+        Swal.fire('El carrito quedó vacío', 'Puedes volver a comprar', 'success');
+        //storage NEW
+        localStorage.removeItem("carrito");
+    }
 }
 
 // calculo el total a pagar
