@@ -1,5 +1,5 @@
 // Proyecto Final JS
-let prodcutos;
+let productos;
 obtenerJsonProductos();
 let carrito = JSON.parse(localStorage.getItem('carrito')) || []; // operador de asignacion condicional
 let shopcontent = document.getElementById("mainGrid");
