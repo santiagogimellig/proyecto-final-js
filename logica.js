@@ -204,7 +204,7 @@ function calcularTotal() {
 }
 
 async function obtenerJsonProductos(){
-    const URLJSON = '/productos.json';
+    const URLJSON = './productos.json';
     const respuesta = await fetch(URLJSON);
     const data = await respuesta.json();
     console.log(data);
