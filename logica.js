@@ -36,6 +36,7 @@ function renderizarProductos(productos){
     colorBotones();
 }
 
+// cambio de color en el boton comprar cuando se pasa por arriba con el mouse
 function colorBotones() {
     let botones = document.getElementsByClassName("btn btn-primary");
     for(const boton of botones){
@@ -48,18 +49,6 @@ function colorBotones() {
     }
 }
 
-// // cambio de color en el boton comprar cuando se pasa por arriba con el mouse
-// let botones = document.querySelectorAll(".btn.btn-primary");
-
-// for (const boton of botones) {
-//     boton.addEventListener("mouseover", () => {
-//     boton.classList.replace("btn-primary", "btn-warning");
-//     });
-
-//     boton.addEventListener("mouseout", () => {
-//     boton.classList.replace("btn-warning", "btn-primary");
-//     });
-// }
 // funcion para que un producto se agregue al carrito
 function agregarAlCarrito(producto) {
     const productoExistente = carrito.find((item) => item.id === producto.id); // busco un producto especifico en el array
